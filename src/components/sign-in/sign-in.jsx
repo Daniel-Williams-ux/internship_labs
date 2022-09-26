@@ -7,7 +7,7 @@ const SignIn = () => (
     <h3>Sign in here!</h3>
 
     <form>
-      <label for="email">Email</label>
+      <label htmlFor="email">Email</label>
       <input name="email" type="email" />
       <label for="password">Password</label>
       <input name="password" type="password" />

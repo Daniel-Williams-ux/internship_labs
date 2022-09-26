@@ -1,19 +1,23 @@
 import React from 'react';
 import './sign-up.css';
+import content from '../../static/index.jsx'
 
 const SignUp = () => (
   <div className="sign-up">
     <h1>Don't Have an account?</h1>
     <h3>Sign up here!</h3>
     <form>
-      <label for="text">Full Name</label>
-      <input name="text" type="text" />
-      <label for="email">Email</label>
-      <input name="email" type="email" />
-      <label for="password">Password</label>
-      <input name="password" type="password" />
+      {content.inputs.map((input, key) => {
+    return (
+      <div key={key}>
+        <label htmlFor={input.name}>{input.label}</label>
+        <br/>
+        <input type={input.type} name={input.name} />
+      </div>
+    )
+      })}
 
-    <label for="option">User Type</label>
+    <label htmlFor="option">User Type</label>
     <select id="options">
       <option value="Developer">Developer</option>
       <option value="Owner">Owner</option>
