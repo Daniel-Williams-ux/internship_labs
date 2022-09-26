@@ -20,6 +20,7 @@ const SignUp = () => (
     </select>
     <button>SIGN UP</button>  
     </form>
+    <p>Have an account? Sign In</p>
     
   </div>
 )
